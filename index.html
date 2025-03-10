@@ -11,14 +11,21 @@
     <!-- Text instead of Logo -->
     <h1 class="heading">Free Attendance?</h1>
 
-    <!-- Video (Autoplay + Muted to bypass browser restrictions) -->
-    <video autoplay loop muted playsinline class="video" id="video">
-      <source src="video.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
+    <!-- Video (Initial state hidden) -->
+    <div class="video-wrapper">
+      <video class="video" id="video" loop playsinline>
+        <source src="video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
 
-    <!-- Background Audio -->
-    <audio id="background-audio" src="bg.mp3" loop></audio>
+      <!-- Overlay Button -->
+      <div class="overlay" id="overlay">
+        <button class="play-btn" onclick="startVideo()">Touch Here</button>
+      </div>
+
+      <!-- Countdown Display -->
+      <div class="countdown" id="countdown"></div>
+    </div>
 
     <!-- Redirect Button -->
     <button class="redirect-btn" onclick="redirectToSocial()">Click This</button>
