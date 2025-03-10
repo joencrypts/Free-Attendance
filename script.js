@@ -20,9 +20,14 @@ window.onload = () => {
       countdown.style.display = 'none';
       video.style.display = 'block';
 
-      // Start video and unmute
-      video.muted = false;
-      video.play().catch(error => console.error('Video play failed:', error));
+      // Start video (muted initially to allow autoplay)
+      video.muted = true;
+      video.play().then(() => {
+        // Try to unmute after autoplay starts (if allowed by the browser)
+        video.muted = false;
+      }).catch(error => {
+        console.error('Autoplay failed:', error);
+      });
     }
   }, 1000);
 };
