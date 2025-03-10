@@ -3,15 +3,12 @@ function redirectToSocial() {
   window.location.href = 'https://www.instagram.com/texus_2k25'; // Replace with your social media link
 }
 
-// Start video with countdown
-function startVideo() {
+// Start video with countdown after 3 seconds
+window.onload = () => {
   const video = document.getElementById('video');
-  const overlay = document.getElementById('overlay');
   const countdown = document.getElementById('countdown');
 
-  overlay.style.display = 'none'; // Hide overlay
   countdown.style.display = 'block';
-
   let count = 3;
   countdown.innerText = count;
 
@@ -28,4 +25,4 @@ function startVideo() {
       video.play().catch(error => console.error('Video play failed:', error));
     }
   }, 1000);
-}
+};
