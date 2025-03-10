@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
 }
 
 /* Body Styling */
@@ -12,9 +12,9 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: linear-gradient(-45deg, #ff6b6b, #f06595, #845ef7, #5c7cfa);
+  background: linear-gradient(135deg, #1e40af, #9333ea, #4ade80);
   background-size: 400% 400%;
-  animation: backgroundAnimation 10s ease infinite;
+  animation: backgroundAnimation 8s ease infinite;
 }
 
 /* Background Animation */
@@ -27,21 +27,20 @@ body {
 /* Container Styling */
 .container {
   text-align: center;
-  backdrop-filter: blur(10px);
-  padding: 20px;
+  backdrop-filter: blur(12px);
+  padding: 24px;
   border-radius: 16px;
-  background-color: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
   width: 90%;
   max-width: 600px;
 }
 
 /* Heading Styling */
 .heading {
-  font-size: 28px;
-  color: #ffffff;
+  font-size: 32px;
+  color: #f0f9ff;
   margin-bottom: 20px;
-  text-align: center;
   font-weight: bold;
   text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
   animation: fadeIn 0.6s ease;
@@ -64,31 +63,12 @@ body {
   height: auto;
   border-radius: 12px;
   margin-bottom: 20px;
-  border: 3px solid rgba(255, 255, 255, 0.6);
-}
-
-/* Play Button Styling */
-.play-btn {
-  background: linear-gradient(90deg, #ff6b6b, #f06595);
-  color: white;
-  border: none;
-  padding: 12px 24px;
-  font-size: 16px;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  margin-bottom: 15px;
-}
-
-.play-btn:hover {
-  background: linear-gradient(90deg, #f06595, #ff6b6b);
-  transform: translateY(-2px);
+  border: 3px solid rgba(255, 255, 255, 0.3);
 }
 
 /* Redirect Button Styling */
 .redirect-btn {
-  background: linear-gradient(90deg, #ff6b6b, #f06595);
+  background: linear-gradient(90deg, #9333ea, #2563eb);
   color: white;
   border: none;
   padding: 12px 24px;
@@ -100,28 +80,22 @@ body {
 }
 
 .redirect-btn:hover {
-  background: linear-gradient(90deg, #f06595, #ff6b6b);
+  background: linear-gradient(90deg, #2563eb, #9333ea);
   transform: translateY(-2px);
-}
-
-/* Hide play button when video starts */
-.hidden {
-  display: none;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   .container {
-    padding: 15px;
+    padding: 16px;
     width: 95%;
   }
 
   .heading {
-    font-size: 22px;
+    font-size: 24px;
   }
 
-  .redirect-btn,
-  .play-btn {
+  .redirect-btn {
     padding: 10px 20px;
     font-size: 14px;
   }
@@ -129,11 +103,10 @@ body {
 
 @media (max-width: 480px) {
   .heading {
-    font-size: 18px;
+    font-size: 20px;
   }
 
-  .redirect-btn,
-  .play-btn {
+  .redirect-btn {
     padding: 8px 16px;
     font-size: 12px;
   }
